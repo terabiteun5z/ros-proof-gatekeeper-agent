@@ -1,0 +1,26 @@
+{
+  "name": "ros-proof-gatekeeper-agent",
+  "version": "1.0.0",
+  "description": "Proof Gatekeeper agent endpoint for the zkVerify Agent Games: HMAC-verified task intake, deterministic approve/reject policy, local Groth16 proving with snarkjs, Kurier submission.",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/local-server.ts",
+    "test": "tsx test/harness.ts",
+    "probe:signals": "node scripts/probe-signals.js",
+    "serve": "node dist/src/local-server.js"
+  },
+  "dependencies": {
+    "snarkjs": "^0.7.6"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^5.6.3",
+    "circom_runtime": "^0.1.28"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "main": "src/server.ts"
+}
