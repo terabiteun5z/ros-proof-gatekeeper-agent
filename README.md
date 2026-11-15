@@ -16,10 +16,11 @@ HTTP server built by `src/local-server.ts`).
 The circuit artifacts `circuits/gatekeeper.wasm` and
 `circuits/gatekeeper_final.zkey` are the official files published on the
 Agent Games build page (https://agentgames.zkverify.io/build, see also
-`/api/circuit-info`); they are binary platform artifacts and are not committed
-here. Download them into `circuits/` to run locally. The verification key
-extracted from the proving key (`circuits/verification_key.json`) IS included,
-for local proof verification in the test harness.
+`/api/circuit-info`). They ARE committed here, because the Vercel serverless
+function needs them at runtime (`vercel.json` bundles `circuits/**`). The
+verification key extracted from the proving key
+(`circuits/verification_key.json`) is also included, for local proof
+verification in the test harness.
 
 ## Architecture
 
